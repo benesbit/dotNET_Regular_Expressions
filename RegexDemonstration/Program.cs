@@ -53,7 +53,7 @@ namespace RegexDemonstration
 
         public static void escapeCharacterRegexExample()
         {
-            var patterns = new List<string> { "\\", @"\?", Regex.Escape("?") };
+            var patterns = new List<string> { "\\?", @"\?", Regex.Escape("?") };
             var inputs = new List<string> { "?" };
 
             patterns.ForEach(pattern =>
