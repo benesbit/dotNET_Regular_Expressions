@@ -47,7 +47,7 @@ namespace RegexDemonstration
 
                     var isMatch = regex.IsMatch(input);
 
-                    Console.WriteLine("\t\t{0}.", isMatch ? "Accepted" : "Rejected");
+                    Console.WriteLine($"\t\t{(isMatch ? "Accepted" : "Rejected")}.");
 
                     if (!isMatch)
                     {
