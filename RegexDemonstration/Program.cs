@@ -19,6 +19,13 @@ namespace RegexDemonstration
                 inputs.ForEach(input =>
                 {
                     Console.WriteLine($"\tInput pattern: {input}");
+
+                    var results = regex.Matches(input);
+
+                    if (results.Count <= 0)
+                    {
+                        Console.WriteLine("\t\tNo matches found.");
+                    }
                 });
             });
         }
