@@ -68,6 +68,15 @@ namespace RegexDemonstration
                     }
 
                     Console.WriteLine($"Simple replacement results: {Regex.Replace(input, @"(Chicken)(.*)\$(9.99)", @"$1$2$$0.00")}");
+                    var results = Regex.Replace(input, pattern, (match) =>
+                    {
+                        if (match.Groups[1].Value == "Chicken")
+                        {
+                            return match.Value.Replace(match.Groups[2].Value, "0.00");
+                        }
+                        return match.Value;
+                    });
+                    Console.WriteLine($"Advanced replacement results: {results}");
                 });
             });
             Console.ReadKey();
