@@ -12,7 +12,8 @@ namespace RegexDemonstration
             //basicRegexExample();
             //escapeCharacterRegexExample();
             //phoneNumbersRegex();
-            parseReceipts();
+            //parseReceipts();
+            regexAnchorsAndBoundaries();
         }
 
         public static void regexAnchorsAndBoundaries()
@@ -40,6 +41,22 @@ namespace RegexDemonstration
                 "him ",
                 " him ",
             };
+
+            patterns.ForEach(pattern =>
+            {
+                Console.WriteLine($"Regular expression: {pattern}");
+                var regex = new Regex(pattern);
+                inputs.ForEach(input =>
+                {
+                    Console.WriteLine($"\tInput pattern: {input}");
+                    var results = regex.Matches(input);
+                    if (results.Count <= 0)
+                    {
+                        Console.WriteLine("\t\tNo matches found.");
+                    }
+                });
+            });
+            Console.ReadKey();
         }
 
         public static void parseReceipts()
