@@ -15,6 +15,17 @@ namespace RegexDemonstration
             parseReceipts();
         }
 
+        public static void regexAnchorsAndBoundaries()
+        {
+            var patterns = new List<string>
+            {
+                @"\b",
+                @"\B",
+                @"^hi",
+                @"hi$",
+            };
+        }
+
         public static void parseReceipts()
         {
             var patterns = new List<string>
