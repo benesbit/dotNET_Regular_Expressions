@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace RegexDemonstration
 {
@@ -9,6 +10,12 @@ namespace RegexDemonstration
         {
             var patterns = new List<string> { "a*b", "a+b", "a?b" };
             var inputs = new List<string> { "a", "b", "ab", "aab", "abb" };
+
+            patterns.ForEach(pattern =>
+            {
+                Console.WriteLine("Regular expression: {0}", pattern);
+                var regex = new Regex(pattern);
+            });
         }
     }
 }
