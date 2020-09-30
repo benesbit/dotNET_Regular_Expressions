@@ -53,7 +53,6 @@ namespace RegexDemonstration
                     Console.WriteLine($"\tInput pattern: {input}");
 
                     var matches = regex.Matches(input);
-
                     if (matches.Count <= 0)
                     {
                         Console.WriteLine("\t\tNo matches found.");
@@ -67,6 +66,8 @@ namespace RegexDemonstration
                             Console.WriteLine($"\t\t\tGroup at index {group.Index} has value {group.Value}.");
                         }
                     }
+
+                    Console.WriteLine($"Simple replacement results: {Regex.Replace(input, @"(Chicken)(.*)\$(9.99)", @"$1$2 $$0.00")}");
                 });
             });
             Console.ReadKey();
