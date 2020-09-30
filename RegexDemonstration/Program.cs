@@ -43,19 +43,9 @@ namespace RegexDemonstration
                 {
                     Console.WriteLine($"\tInput pattern: {input}");
 
-                    var results = regex.Matches(input);
+                    var isMatch = regex.IsMatch(input);
 
-                    if (results.Count <= 0)
-                    {
-                        Console.WriteLine("\t\tNo matches found.");
-                    }
-                    else
-                    {
-                        foreach (Match result in results)
-                        {
-                            Console.WriteLine($"\t\tMatch found at index {result.Index}. Length: {result.Length}.");
-                        }
-                    }
+                    Console.WriteLine("\t\t{0}.", isMatch ? "Accepted" : "Rejected");
                 });
             });
             Console.ReadKey();
