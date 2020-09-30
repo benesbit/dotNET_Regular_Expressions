@@ -43,6 +43,13 @@ namespace RegexDemonstration
                 "hey ",
                 " hey ",
             };
+
+            patterns.ForEach(pattern =>
+            {
+                Console.WriteLine($"Regular expression: \"{pattern}\"");
+
+                var regex = new Regex(pattern);
+            });
         }
 
         public static void regexAnchorsAndBoundaries()
