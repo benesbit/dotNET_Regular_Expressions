@@ -47,10 +47,12 @@ namespace RegexDemonstration
 
             patterns.ForEach(pattern =>
             {
-                Console.WriteLine($"Regular expression: \"{pattern}\"");
+                Console.WriteLine($"Regular expression: {pattern}");
 
                 var regex = new Regex(pattern);
             });
+
+            Console.ReadKey();
         }
 
         public static void regexAnchorsAndBoundaries()
