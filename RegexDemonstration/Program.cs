@@ -15,6 +15,11 @@ namespace RegexDemonstration
             {
                 Console.WriteLine("Regular expression: {0}", pattern);
                 var regex = new Regex(pattern);
+
+                inputs.ForEach(input =>
+                {
+                    Console.WriteLine("\tInput pattern: {0}", input);
+                });
             });
         }
     }
