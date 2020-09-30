@@ -14,7 +14,7 @@ namespace RegexDemonstration
             //phoneNumbersRegex();
             //parseReceipts();
             //regexAnchorsAndBoundaries();
-            regexExpressionOptions();
+            //regexExpressionOptions();
         }
 
         public static void regexExpressionOptions()
