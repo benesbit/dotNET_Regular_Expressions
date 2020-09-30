@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RegexDemonstration
 {
@@ -6,7 +7,8 @@ namespace RegexDemonstration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var patterns = new List<string> { "a*b", "a+b", "a?b" };
+            var inputs = new List<string> { "a", "b", "ab", "aab", "abb" };
         }
     }
 }
