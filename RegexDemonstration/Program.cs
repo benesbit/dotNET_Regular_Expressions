@@ -63,6 +63,11 @@ namespace RegexDemonstration
                     foreach (Match match in results)
                     {
                         Console.WriteLine($"\t\tMatch found at index {match.Index}. Length: {match.Length}.");
+
+                        foreach (Group group in match.Groups)
+                        {
+                            Console.WriteLine($"\t\t\tGroup at index {group.Index} has value {group.Value}");
+                        }
                     }
                 });
             });
