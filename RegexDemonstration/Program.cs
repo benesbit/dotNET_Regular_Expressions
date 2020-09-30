@@ -24,6 +24,22 @@ namespace RegexDemonstration
                 @"^hi",
                 @"hi$",
             };
+
+            var inputs = new List<string>
+            {
+                "a b",
+                "a",
+                "a b ",
+                " a b ",
+                " ",
+                "",
+                "hi",
+                " hi",
+                "him",
+                " him",
+                "him ",
+                " him ",
+            };
         }
 
         public static void parseReceipts()
