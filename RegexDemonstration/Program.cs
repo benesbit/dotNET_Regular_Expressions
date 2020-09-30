@@ -41,6 +41,34 @@ namespace RegexDemonstration
                 | Salt      |    $2.99  |
                 |-----------|-----------|"
             };
+
+            patterns.ForEach(pattern =>
+            {
+                Console.WriteLine($"Regular expression: {pattern}");
+                var regex = new Regex(pattern);
+
+                inputs.ForEach(input =>
+                {
+                    Console.WriteLine($"\tInput pattern: {input}");
+
+                    var matches = regex.Matches(input);
+
+                    if (matches.Count <= 0)
+                    {
+                        Console.WriteLine("\t\tNo matches found.");
+                    }
+
+                    foreach (Match match in matches)
+                    {
+                        Console.WriteLine($"\t\tMatch at index {match.Index} with length {match.Length}.");
+                        foreach (Group group in match.Groups)
+                        {
+                            Console.WriteLine($"\t\t\tGroup at index {group.Index} has value {group.Value}.");
+                        }
+                    }
+                });
+            });
+            Console.ReadKey();
         }
 
         public static void phoneNumbersRegex()
