@@ -47,13 +47,13 @@ namespace RegexDemonstration
 
             patterns.ForEach(pattern =>
             {
-                Console.WriteLine($"Regular expression: {pattern}");
+                Console.WriteLine($"Regular expression: \"{pattern}\"");
 
                 var regex = new Regex(pattern);
 
                 inputs.ForEach(input =>
                 {
-                    Console.WriteLine($"\tInput pattern: {input}");
+                    Console.WriteLine($"\tInput pattern: \"{input}\"");
 
                     var results = regex.Matches(input);
                     if (results.Count <= 0)
