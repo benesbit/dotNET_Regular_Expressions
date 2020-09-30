@@ -26,6 +26,13 @@ namespace RegexDemonstration
                     {
                         Console.WriteLine("\t\tNo matches found.");
                     }
+                    else
+                    {
+                        foreach (Match result in results)
+                        {
+                            Console.WriteLine($"\t\tMatch found at index {result.Index}. Length: {result.Length}.");
+                        }
+                    }
                 });
             });
         }
