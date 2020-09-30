@@ -12,6 +12,7 @@ namespace RegexDemonstration
             //basicRegexExample();
             //escapeCharacterRegexExample();
             //phoneNumbersRegex();
+            parseReceipts();
         }
 
         public static void parseReceipts()
