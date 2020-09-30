@@ -11,7 +11,36 @@ namespace RegexDemonstration
         {
             //basicRegexExample();
             //escapeCharacterRegexExample();
-            phoneNumbersRegex();
+            //phoneNumbersRegex();
+        }
+
+        public static void parseReceipts()
+        {
+            var patterns = new List<string>
+            {
+                @"([A-Za-z]+).*\$(\d+.\d+)"
+            };
+
+            var inputs = new List<string>
+            {
+                @"
+                |-----------------------|
+                | Receipt from          |
+                | Benjamin's Shop       |
+                |                       |
+                | Thanks for shopping!  |
+                |-----------|-----------|
+                |  Item     |Price $USD |
+                |-----------|-----------|
+                | Shoes     |   $47.99  |
+                | Cabbage   |    $2.99  |
+                | Carrots   |    $1.23  |
+                | Chicken   |    $9.99  |
+                | Beef      |   $12.47  |
+                | Shirt     |    $5.97  |
+                | Salt      |    $2.99  |
+                |-----------|-----------|"
+            };
         }
 
         public static void phoneNumbersRegex()
