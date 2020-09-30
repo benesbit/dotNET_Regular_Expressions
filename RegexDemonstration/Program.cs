@@ -28,6 +28,21 @@ namespace RegexDemonstration
                 "(?n)(he)(?-n)y",
                 "(?x) \r\n h e y",
             };
+
+            var inputs = new List<string>
+            {
+                "hey\nhey",
+                " hey\nhey",
+                " hey\n hey",
+                " hey\n hey ",
+                "Hey",
+                "hey",
+                "HEy",
+                "HEY",
+                " hey",
+                "hey ",
+                " hey ",
+            };
         }
 
         public static void regexAnchorsAndBoundaries()
