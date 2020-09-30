@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace RegexDemonstration
@@ -47,6 +48,16 @@ namespace RegexDemonstration
                     var isMatch = regex.IsMatch(input);
 
                     Console.WriteLine("\t\t{0}.", isMatch ? "Accepted" : "Rejected");
+
+                    if (!isMatch)
+                    {
+                        return;
+                    }
+
+                    var splits = Regex.Split(input, @"-\d\d\d-").ToList();
+
+                    Console.WriteLine($"\t\t\tArea code: {splits[0]}");
+                    Console.WriteLine($"\t\t\tLast 4 digits: {splits[1]}");
                 });
             });
             Console.ReadKey();
