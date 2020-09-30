@@ -13,12 +13,12 @@ namespace RegexDemonstration
 
             patterns.ForEach(pattern =>
             {
-                Console.WriteLine("Regular expression: {0}", pattern);
+                Console.WriteLine($"Regular expression: {pattern}");
                 var regex = new Regex(pattern);
 
                 inputs.ForEach(input =>
                 {
-                    Console.WriteLine("\tInput pattern: {0}", input);
+                    Console.WriteLine($"\tInput pattern: {input}");
                 });
             });
         }
