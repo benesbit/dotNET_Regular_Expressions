@@ -9,14 +9,15 @@ namespace RegexDemonstration
         static void Main(string[] args)
         {
             //basicRegexExample();
-            escapeCharacterRegexExample();
+            //escapeCharacterRegexExample();
+            phoneNumbersRegex();
         }
 
         public static void phoneNumbersRegex()
         {
             var patterns = new List<string>
             {
-                @"\d\d\d-\d\d\d-\d\d\d\d"
+                @"^\d\d\d-\d\d\d-\d\d\d\d$"
             };
 
             var inputs = new List<string>
