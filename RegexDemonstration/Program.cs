@@ -50,6 +50,12 @@ namespace RegexDemonstration
                 Console.WriteLine($"Regular expression: {pattern}");
 
                 var regex = new Regex(pattern);
+
+                inputs.ForEach(input =>
+                {
+                    Console.WriteLine($"\tInput pattern: {input}");
+                    var results = regex.Matches(input);
+                });
             });
 
             Console.ReadKey();
