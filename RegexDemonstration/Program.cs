@@ -13,7 +13,21 @@ namespace RegexDemonstration
             //escapeCharacterRegexExample();
             //phoneNumbersRegex();
             //parseReceipts();
-            regexAnchorsAndBoundaries();
+            //regexAnchorsAndBoundaries();
+        }
+
+        public static void regexExpressionOptions()
+        {
+            var patterns = new List<string>
+            {
+                "(?x)Hey#This is a comment",
+                "He(?# This is a comment...)y",
+                "H(?i)e(?-i)y",
+                @"(?m)^hey$",
+                "(he)y",
+                "(?n)(he)(?-n)y",
+                "(?x) \r\n h e y",
+            };
         }
 
         public static void regexAnchorsAndBoundaries()
