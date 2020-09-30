@@ -67,7 +67,7 @@ namespace RegexDemonstration
                         }
                     }
 
-                    Console.WriteLine($"Simple replacement results: {Regex.Replace(input, @"(Chicken)(.*)\$(9.99)", @"$1$2 $$0.00")}");
+                    Console.WriteLine($"Simple replacement results: {Regex.Replace(input, @"(Chicken)(.*)\$(9.99)", @"$1$2$$0.00")}");
                 });
             });
             Console.ReadKey();
