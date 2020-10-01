@@ -13,7 +13,8 @@ namespace RegexDemonstration
             //RegexExamples.regexExpressionOptions();
             //RegexExamples.regexLookaheadLookbehind();
             //RegexExamples.regexRunawyExpression();
-            RegexExamples.regexUnicodeDemonstration();
+            //RegexExamples.regexUnicodeDemonstration();
+            RegexExamples.regexCapturesAndBalancingGroups();
         }
     }
 }
