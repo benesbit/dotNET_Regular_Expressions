@@ -50,6 +50,10 @@ namespace RegexDemonstration
             {
                 Console.WriteLine($"\tInput: {input}");
                 Console.WriteLine($"\tPattern: {examplePattern}");
+                foreach (Match match in Regex.Matches(input, examplePattern))
+                {
+                    Console.WriteLine($"\t\t{match.Value}: Match at index {match.Index} of length {match.Length}");
+                }
             }
 
             Console.ReadKey();
