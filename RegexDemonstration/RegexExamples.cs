@@ -16,6 +16,9 @@ namespace RegexDemonstration
             Console.WriteLine($"Micro and Mu Symbols:");
             Console.WriteLine($"\t Does {input} match {pattern}? {Regex.IsMatch(input, pattern)}");
 
+            Console.WriteLine($"\tInput's code point: {GetCodePoint(input, 0)}");
+            Console.WriteLine($"\tPatterns's code point: {GetCodePoint(pattern, 0)}");
+
             Console.ReadKey();
         }
 
