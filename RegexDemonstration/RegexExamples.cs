@@ -8,6 +8,10 @@ namespace RegexDemonstration
 {
     class RegexExamples
     {
+        public static void regexOptimizationAndSecurity()
+        {
+
+        }
         public static void regexCapturesAndBalancingGroups()
         {
             var input = "µ";
