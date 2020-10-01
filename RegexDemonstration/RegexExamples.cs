@@ -56,6 +56,16 @@ namespace RegexDemonstration
             timer.Stop();
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
 
+            Console.WriteLine();
+
+            Console.WriteLine("Lazy Regex:");
+            timer.Reset();
+            timer.Start();
+            Regex.IsMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+                "a+?b");
+            timer.Stop();
+            Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
+
             Console.ReadKey();
         }
         public static void regexCapturesAndBalancingGroups()
