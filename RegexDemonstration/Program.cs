@@ -14,7 +14,8 @@ namespace RegexDemonstration
             //RegexExamples.regexLookaheadLookbehind();
             //RegexExamples.regexRunawyExpression();
             //RegexExamples.regexUnicodeDemonstration();
-            RegexExamples.regexCapturesAndBalancingGroups();
+            //RegexExamples.regexCapturesAndBalancingGroups();
+            RegexExamples.regexOptimizationAndSecurity();
         }
     }
 }
