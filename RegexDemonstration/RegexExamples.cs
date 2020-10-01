@@ -13,7 +13,14 @@ namespace RegexDemonstration
             Console.WriteLine("Interpreted Regex:");
             var input = "The quick brown fox jumps over the lazy dog.";
 
-            
+            var timer = new Stopwatch();
+            timer.Start();
+            var interpretedRegex = new Regex("(fox|dog)*");
+            for (int i = 0; i < 1000000; ++i)
+            {
+                interpretedRegex.Match(input);
+            }
+            timer.Stop();
 
             Console.ReadKey();
         }
