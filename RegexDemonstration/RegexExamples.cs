@@ -10,8 +10,10 @@ namespace RegexDemonstration
     {
         public static void regexCapturesAndBalancingGroups()
         {
-            var input = "μ";
+            var input = "µ";
             var pattern = "μ";
+
+
 
             Console.ReadKey();
         }
