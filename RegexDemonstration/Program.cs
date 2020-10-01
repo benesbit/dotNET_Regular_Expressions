@@ -58,6 +58,7 @@ namespace RegexDemonstration
                     Console.WriteLine($"\t\tRuntime: {watch.Elapsed.TotalMilliseconds}ms");
                 });
             });
+            Console.ReadKey();
         }
 
         public static void regexLookaheadLookbehind()
