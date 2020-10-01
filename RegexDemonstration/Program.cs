@@ -8,7 +8,7 @@ namespace RegexDemonstration
             //RegexExamples.basicRegexExample();
             //RegexExamples.escapeCharacterRegexExample();
             //RegexExamples.phoneNumbersRegex();
-            //RegexExamples.parseReceipts();
+            //RegexExamples.regexParseReceipts();
             //RegexExamples.regexAnchorsAndBoundaries();
             //RegexExamples.regexExpressionOptions();
             //RegexExamples.regexLookaheadLookbehind();

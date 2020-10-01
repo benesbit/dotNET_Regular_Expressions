@@ -8,6 +8,11 @@ namespace RegexDemonstration
 {
     class RegexExamples
     {
+        public static void regexCapturesAndBalancingGroups()
+        {
+
+        }
+
         public static void regexUnicodeDemonstration()
         {
             var input = "a";
@@ -251,7 +256,7 @@ namespace RegexDemonstration
             Console.ReadKey();
         }
 
-        public static void parseReceipts()
+        public static void regexParseReceipts()
         {
             var patterns = new List<string>
             {
