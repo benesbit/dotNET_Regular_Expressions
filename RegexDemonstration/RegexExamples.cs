@@ -16,6 +16,8 @@ namespace RegexDemonstration
             Console.WriteLine($"\tCode point: {GetCodePoint(input, 0)}");
             Console.WriteLine($"\tLength of input string: {input.Length}");
 
+            Console.WriteLine($"\tIs uppercase letter? {Regex.IsMatch(input, @"\p{Lu}")}");
+
             Console.ReadKey();
         }
 
