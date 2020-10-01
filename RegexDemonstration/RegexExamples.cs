@@ -19,6 +19,9 @@ namespace RegexDemonstration
             Console.WriteLine($"\tInput's code point: {GetCodePoint(input, 0)}");
             Console.WriteLine($"\tPatterns's code point: {GetCodePoint(pattern, 0)}");
 
+            input = "مرحبا العالم مرحبا";
+            pattern = @"مرحبا";
+
             Console.ReadKey();
         }
 
