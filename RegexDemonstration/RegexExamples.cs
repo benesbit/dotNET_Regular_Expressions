@@ -21,6 +21,7 @@ namespace RegexDemonstration
                 interpretedRegex.Match(input);
             }
             timer.Stop();
+            Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
 
             Console.ReadKey();
         }
