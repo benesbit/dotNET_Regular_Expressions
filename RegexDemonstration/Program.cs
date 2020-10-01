@@ -12,7 +12,8 @@ namespace RegexDemonstration
             //RegexExamples.regexAnchorsAndBoundaries();
             //RegexExamples.regexExpressionOptions();
             //RegexExamples.regexLookaheadLookbehind();
-            RegexExamples.regexRunawyExpression();
+            //RegexExamples.regexRunawyExpression();
+            RegexExamples.regexLocaleDemonstration();
         }
     }
 }
