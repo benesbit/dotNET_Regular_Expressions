@@ -15,7 +15,18 @@ namespace RegexDemonstration
             //parseReceipts();
             //regexAnchorsAndBoundaries();
             //regexExpressionOptions();
-            regexLookaheadLookbehind();
+            //regexLookaheadLookbehind();
+
+        }
+
+        public static void regexRunawyExpression()
+        {
+            var patterns = new List<string>
+            {
+                @"<.+>",
+                @"<.+?>",
+                @"(a+(aa)+(aaa)+(aa)+a+)+b."
+            };
         }
 
         public static void regexLookaheadLookbehind()
