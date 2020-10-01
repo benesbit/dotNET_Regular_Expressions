@@ -65,6 +65,7 @@ namespace RegexDemonstration
                     }
                 });
             });
+            Console.ReadKey();
         }
 
         public static void regexExpressionOptions()
