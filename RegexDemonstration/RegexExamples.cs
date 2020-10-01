@@ -66,6 +66,19 @@ namespace RegexDemonstration
             timer.Stop();
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
 
+            Console.WriteLine();
+
+            Console.WriteLine("Timed Regex");
+            var timedRegex = new Regex("(a+(aa)+(aaa)+(aa)+a+)+b.", RegexOptions.None, TimeSpan.FromSeconds(1));
+            try
+            {
+                timedRegex.IsMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab");
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                Console.WriteLine($"\tThe match timed out");
+            }
+
             Console.ReadKey();
         }
         public static void regexCapturesAndBalancingGroups()
