@@ -22,6 +22,19 @@ namespace RegexDemonstration
             input = "مرحبا العالم مرحبا";
             pattern = @"مرحبا";
 
+            Console.WriteLine($"Right to Left Option:");
+            Console.WriteLine($"\tWithout the RightToLeft Option:");
+            foreach (Match match in Regex.Matches(input, pattern))
+            {
+                Console.WriteLine($"\t\tMatch at index {match.Index} of length {match.Length}");
+            }
+
+            Console.WriteLine($"\tWith the RightToLeft Option:");
+            foreach (Match match in Regex.Matches(input, pattern, RegexOptions.RightToLeft))
+            {
+                Console.WriteLine($"\t\tMatch at index {match.Index} of length {match.Length}");
+            }
+
             Console.ReadKey();
         }
 
