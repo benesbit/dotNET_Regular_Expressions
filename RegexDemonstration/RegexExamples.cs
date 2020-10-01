@@ -323,7 +323,7 @@ namespace RegexDemonstration
             Console.ReadKey();
         }
 
-        public static void phoneNumbersRegex()
+        public static void regexPhoneNumbers()
         {
             var patterns = new List<string>
             {
@@ -372,7 +372,7 @@ namespace RegexDemonstration
             Console.ReadKey();
         }
 
-        public static void escapeCharacterRegexExample()
+        public static void regexEscapeCharacterExample()
         {
             var patterns = new List<string> { "\\?", @"\?", Regex.Escape("?") };
             var inputs = new List<string> { "?" };
@@ -404,7 +404,7 @@ namespace RegexDemonstration
             Console.ReadKey();
         }
 
-        public static void basicRegexExample()
+        public static void regexBasicExample()
         {
             var patterns = new List<string> { "a*b", "a+b", "a?b" };
             var inputs = new List<string> { "a", "b", "ab", "aab", "abb" };

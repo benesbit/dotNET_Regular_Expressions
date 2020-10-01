@@ -5,9 +5,9 @@ namespace RegexDemonstration
     {
         static void Main(string[] args)
         {
-            //RegexExamples.basicRegexExample();
-            //RegexExamples.escapeCharacterRegexExample();
-            //RegexExamples.phoneNumbersRegex();
+            //RegexExamples.regexBasicExample();
+            //RegexExamples.regexEscapeCharacterExample();
+            //RegexExamples.regexPhoneNumbers();
             //RegexExamples.regexParseReceipts();
             //RegexExamples.regexAnchorsAndBoundaries();
             //RegexExamples.regexExpressionOptions();
