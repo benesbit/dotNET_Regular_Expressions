@@ -56,6 +56,10 @@ namespace RegexDemonstration
                     foreach (Group group in match.Groups)
                     {
                         Console.WriteLine($"\t\t\t{group.Value}: Group at index {group.Index} of length {group.Length}.");
+                        foreach (Capture capture in group.Captures)
+                        {
+                            Console.WriteLine($"\t\t\t\t{capture.Value}: Capture at index {capture.Index} of length {capture.Length}.");
+                        }
                     }
                 }
             }
