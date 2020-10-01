@@ -73,6 +73,19 @@ namespace RegexDemonstration
             Console.WriteLine($"\tPattern: {pattern}");
             Console.WriteLine($"\tIs {input} balanced? {Regex.IsMatch(input, pattern)}");
 
+            input = @"{}}";
+            Console.WriteLine($"\tIs {input} balanced? {Regex.IsMatch(input, pattern)}");
+
+            input = @"{}{";
+            Console.WriteLine($"\tIs {input} balanced? {Regex.IsMatch(input, pattern)}");
+
+            input = @"}{";
+            Console.WriteLine($"\tIs {input} balanced? {Regex.IsMatch(input, pattern)}");
+
+            input = @"{ {} {    }}";
+            Console.WriteLine($"\tIs {input} balanced? {Regex.IsMatch(input, pattern)}");
+
+
             Console.ReadKey();
         }
 
