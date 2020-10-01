@@ -8,6 +8,16 @@ namespace RegexDemonstration
 {
     class RegexExamples
     {
+        public static void regexLocaleDemonstration()
+        {
+            var input = "a";
+
+            Console.WriteLine(input);
+            Console.WriteLine($"\tCode point: {GetCodePoint(input, 0)}");
+
+            Console.ReadKey();
+        }
+
         public static void regexRunawyExpression()
         {
             var patterns = new List<string>
@@ -385,6 +395,15 @@ namespace RegexDemonstration
                 });
             });
             Console.ReadKey();
+        }
+
+        private static string GetCodePoint(string input, int index)
+        {
+            if (Char.IsSurrogatePair(input, index))
+            {
+                return String.Format("U+{0:X8}", Char.ConvertToUtf32(input, index));
+            }
+            return String.Format("U+{0:X4}", Char.ConvertToUtf32(input, index));
         }
     }
 }
