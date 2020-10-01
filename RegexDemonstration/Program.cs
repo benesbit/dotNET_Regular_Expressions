@@ -27,6 +27,12 @@ namespace RegexDemonstration
                 @"<.+?>",
                 @"(a+(aa)+(aaa)+(aa)+a+)+b."
             };
+            var inputs = new List<string>
+            {
+                "a<tag>b</tag>c",
+                "aaaaaaaaaaaaaaaaaaaab",
+                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"
+            };
         }
 
         public static void regexLookaheadLookbehind()
