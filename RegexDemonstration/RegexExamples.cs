@@ -43,7 +43,7 @@ namespace RegexDemonstration
             var patterns = new List<string>
             {
                 @"\b\w+\b",
-                @"\bb(\w)+\b",
+                @"\b(\w)+\b",
             };
             Console.WriteLine("Captures:");
             foreach (var examplePattern in patterns)
