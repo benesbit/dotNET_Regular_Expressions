@@ -38,6 +38,8 @@ namespace RegexDemonstration
             Console.WriteLine($"\tCode point: {GetCodePoint(input, 0)}");
             Console.WriteLine($"\tLength: {input.Length}");
 
+            Console.WriteLine($"\tDoes the emoji match \\U0001F60E? {Regex.IsMatch(input, "\U0001F60E")}");
+
             Console.ReadKey();
         }
 
