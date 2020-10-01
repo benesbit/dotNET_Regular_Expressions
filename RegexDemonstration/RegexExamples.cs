@@ -13,7 +13,8 @@ namespace RegexDemonstration
             var input = "µ";
             var pattern = "μ";
 
-
+            Console.WriteLine($"Micro and Mu Symbols:");
+            Console.WriteLine($"\t Does {input} match {pattern}? {Regex.IsMatch(input, pattern)}");
 
             Console.ReadKey();
         }
