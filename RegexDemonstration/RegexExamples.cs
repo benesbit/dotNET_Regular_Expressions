@@ -13,7 +13,6 @@ namespace RegexDemonstration
             Console.WriteLine("Interpreted Regex:");
             var input = "The quick brown fox jumps over the lazy dog.";
             var interpretedRegex = new Regex("(fox|dog)*");
-
             var timer = new Stopwatch();
             timer.Start();
             for (int i = 0; i < 1000000; ++i)
@@ -21,7 +20,6 @@ namespace RegexDemonstration
                 interpretedRegex.Match(input);
             }
             timer.Stop();
-
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
             Console.WriteLine($"\tCache size: {Regex.CacheSize}");
 
@@ -29,7 +27,6 @@ namespace RegexDemonstration
 
             Console.WriteLine("Compiled Regex:");
             var compiledRegex = new Regex("(fox|dog)*", RegexOptions.Compiled);
-
             timer.Reset();
             timer.Start();
             for (int i = 0; i < 1000000; ++i)
@@ -37,31 +34,26 @@ namespace RegexDemonstration
                 compiledRegex.Match(input);
             }
             timer.Stop();
-
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
 
             Console.WriteLine();
 
             Console.WriteLine("Slow Regex:");
-
             timer.Reset();
             timer.Start();
             Regex.IsMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
                 "(a+(aa)+(aaa)+(aa)+a+)+b.");
             timer.Stop();
-
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
 
             Console.WriteLine();
 
             Console.WriteLine("Non-Capturing Regex:");
-
             timer.Reset();
             timer.Start();
             Regex.IsMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
                 "(?:a+(?:aa)+(?:aaa)+(?:aa)+a+)+b.");
             timer.Stop();
-
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
 
             Console.ReadKey();
