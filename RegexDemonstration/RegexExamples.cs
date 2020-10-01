@@ -22,6 +22,7 @@ namespace RegexDemonstration
             }
             timer.Stop();
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
+            Console.WriteLine($"\tCache size: {Regex.CacheSize}");
 
             Console.ReadKey();
         }
