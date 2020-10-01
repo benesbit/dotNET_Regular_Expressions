@@ -76,7 +76,7 @@ namespace RegexDemonstration
             }
             catch (RegexMatchTimeoutException)
             {
-                Console.WriteLine($"\tThe match timed out");
+                Console.WriteLine($"\tThe match timed out after one second.");
             }
 
             Console.ReadKey();
