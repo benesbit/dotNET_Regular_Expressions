@@ -26,6 +26,11 @@ namespace RegexDemonstration
             Console.WriteLine($"\tCode point: {GetCodePoint(input, 0)}");
             Console.WriteLine($"\tLength: {input.Length}");
 
+            Console.WriteLine($"\tDoes the input match \\u274C? {Regex.IsMatch(input, "\u274C")}");
+
+            Console.WriteLine($"\tIs in Dingbats? {Regex.IsMatch(input, @"\p{IsDingbats}")}"); // Dingbats are from U+2700 to U+27BF
+            Console.WriteLine($"\tIs not in Dingbats? {Regex.IsMatch(input, @"\P{IsDingbats}")}");
+
             Console.ReadKey();
         }
 
