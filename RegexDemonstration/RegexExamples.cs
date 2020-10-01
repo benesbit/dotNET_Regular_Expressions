@@ -39,7 +39,18 @@ namespace RegexDemonstration
             timer.Stop();
 
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
-            Console.WriteLine($"\tCache size: {Regex.CacheSize}");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Slow Regex:");
+
+            timer.Reset();
+            timer.Start();
+            Regex.IsMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+                "(a+(aa)+(aaa)+(aa)+a+)+b.");
+            timer.Stop();
+
+            Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
 
             Console.ReadKey();
         }
