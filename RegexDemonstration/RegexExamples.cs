@@ -12,15 +12,32 @@ namespace RegexDemonstration
         {
             Console.WriteLine("Interpreted Regex:");
             var input = "The quick brown fox jumps over the lazy dog.";
+            var interpretedRegex = new Regex("(fox|dog)*");
 
             var timer = new Stopwatch();
             timer.Start();
-            var interpretedRegex = new Regex("(fox|dog)*");
             for (int i = 0; i < 1000000; ++i)
             {
                 interpretedRegex.Match(input);
             }
             timer.Stop();
+
+            Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
+            Console.WriteLine($"\tCache size: {Regex.CacheSize}");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Compiled Regex:");
+            var compiledRegex = new Regex("(fox|dog)*", RegexOptions.Compiled);
+
+            timer.Reset();
+            timer.Start();
+            for (int i = 0; i < 1000000; ++i)
+            {
+                compiledRegex.Match(input);
+            }
+            timer.Stop();
+
             Console.WriteLine($"\tElapsed time: {timer.ElapsedMilliseconds}ms");
             Console.WriteLine($"\tCache size: {Regex.CacheSize}");
 
