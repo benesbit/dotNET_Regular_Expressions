@@ -34,6 +34,9 @@ namespace RegexDemonstration
             Console.WriteLine();
 
             input = "😎";
+            Console.WriteLine($"Smiling Face with Sunglasses Emoji");
+            Console.WriteLine($"\tCode point: {GetCodePoint(input, 0)}");
+            Console.WriteLine($"\tLength: {input.Length}");
 
             Console.ReadKey();
         }
