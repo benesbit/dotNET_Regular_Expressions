@@ -10,7 +10,10 @@ namespace RegexDemonstration
     {
         public static void regexCapturesAndBalancingGroups()
         {
+            var input = "μ";
+            var pattern = "μ";
 
+            Console.ReadKey();
         }
 
         public static void regexUnicodeDemonstration()
