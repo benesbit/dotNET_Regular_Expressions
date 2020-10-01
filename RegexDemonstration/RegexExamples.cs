@@ -64,6 +64,15 @@ namespace RegexDemonstration
                 }
             }
 
+            Console.WriteLine();
+
+            input = @"{}";
+            pattern = @"^((?:[^{}]*)|(?<Open>{)|(?<-Open>}))*$";
+            Console.WriteLine($"Balancing Groups:");
+            Console.WriteLine($"\tInput: {input}");
+            Console.WriteLine($"\tPattern: {pattern}");
+            Console.WriteLine($"\tIs {input} balanced? {Regex.IsMatch(input, pattern)}");
+
             Console.ReadKey();
         }
 
