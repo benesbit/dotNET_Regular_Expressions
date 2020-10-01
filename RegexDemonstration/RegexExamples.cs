@@ -10,7 +10,12 @@ namespace RegexDemonstration
     {
         public static void regexOptimizationAndSecurity()
         {
+            Console.WriteLine("Interpreted Regex:");
+            var input = "The quick brown fox jumps over the lazy dog.";
 
+            
+
+            Console.ReadKey();
         }
         public static void regexCapturesAndBalancingGroups()
         {
