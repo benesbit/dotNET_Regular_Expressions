@@ -19,8 +19,12 @@ namespace RegexDemonstration
             Console.WriteLine($"\tIs an uppercase letter? {Regex.IsMatch(input, @"\p{Lu}")}");
             Console.WriteLine($"\tIs not an uppercase letter? {Regex.IsMatch(input, @"\P{Lu}")}");
 
+            Console.WriteLine();
+
             input = "❌";
             Console.WriteLine($"Cross Mark");
+            Console.WriteLine($"\tCode point: {GetCodePoint(input, 0)}");
+            Console.WriteLine($"\tLength: {input.Length}");
 
             Console.ReadKey();
         }
