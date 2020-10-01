@@ -31,6 +31,10 @@ namespace RegexDemonstration
             Console.WriteLine($"\tIs in Dingbats? {Regex.IsMatch(input, @"\p{IsDingbats}")}"); // Dingbats are from U+2700 to U+27BF
             Console.WriteLine($"\tIs not in Dingbats? {Regex.IsMatch(input, @"\P{IsDingbats}")}");
 
+            Console.WriteLine();
+
+            input = "😎";
+
             Console.ReadKey();
         }
 
