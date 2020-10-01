@@ -45,6 +45,15 @@ namespace RegexDemonstration
                     Console.WriteLine($"\tInput pattern: {input}");
                     var watch = new Stopwatch();
                     watch.Start();
+                    var results = regex.Matches(input);
+                    if (results.Count <= 0)
+                    {
+                        Console.WriteLine($"\t\tNo matches found.");
+                    }
+                    foreach (Match result in results)
+                    {
+                        Console.WriteLine($"\t\tMatch found at index {result.Index}. Length: {result.Length}.");
+                    }
                 });
             });
         }
