@@ -54,6 +54,8 @@ namespace RegexDemonstration
                     {
                         Console.WriteLine($"\t\tMatch found at index {result.Index}. Length: {result.Length}.");
                     }
+                    watch.Stop();
+                    Console.WriteLine($"\t\tRuntime: {watch.Elapsed.TotalMilliseconds}ms");
                 });
             });
         }
