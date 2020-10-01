@@ -49,6 +49,7 @@ namespace RegexDemonstration
             });
             Console.ReadKey();
         }
+
         public static void regexLookaheadLookbehind()
         {
             var patterns = new List<string>
