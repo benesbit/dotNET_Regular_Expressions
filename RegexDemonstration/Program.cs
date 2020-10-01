@@ -33,6 +33,17 @@ namespace RegexDemonstration
                 "aaaaaaaaaaaaaaaaaaaab",
                 "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"
             };
+
+            patterns.ForEach(pattern =>
+            {
+                Console.WriteLine($"Regular expression {pattern}");
+
+                var regex = new Regex(pattern);
+                inputs.ForEach(input =>
+                {
+                    Console.WriteLine($"\tInput pattern: {input}");
+                });
+            });
         }
 
         public static void regexLookaheadLookbehind()
