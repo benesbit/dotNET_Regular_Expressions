@@ -53,6 +53,10 @@ namespace RegexDemonstration
                 foreach (Match match in Regex.Matches(input, examplePattern))
                 {
                     Console.WriteLine($"\t\t{match.Value}: Match at index {match.Index} of length {match.Length}");
+                    foreach (Group group in match.Groups)
+                    {
+                        Console.WriteLine($"\t\t\t{group.Value}: Group at index {group.Index} of length {group.Length}.");
+                    }
                 }
             }
 
