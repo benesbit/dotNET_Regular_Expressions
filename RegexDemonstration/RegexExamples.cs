@@ -402,9 +402,9 @@ namespace RegexDemonstration
         {
             if (Char.IsSurrogatePair(input, index))
             {
-                return String.Format("U+{0:X8}", Char.ConvertToUtf32(input, index));
+                return String.Format($"U+{Char.ConvertToUtf32(input, index):X8}");
             }
-            return String.Format("U+{0:X4}", Char.ConvertToUtf32(input, index));
+            return String.Format($"U+{Char.ConvertToUtf32(input, index):X4}");
         }
     }
 }
