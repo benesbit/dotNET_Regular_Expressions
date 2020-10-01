@@ -19,6 +19,8 @@ namespace RegexDemonstration
             Console.WriteLine($"\tInput's code point: {GetCodePoint(input, 0)}");
             Console.WriteLine($"\tPatterns's code point: {GetCodePoint(pattern, 0)}");
 
+            Console.WriteLine();
+
             input = "مرحبا العالم مرحبا";
             pattern = @"مرحبا";
 
@@ -33,6 +35,21 @@ namespace RegexDemonstration
             foreach (Match match in Regex.Matches(input, pattern, RegexOptions.RightToLeft))
             {
                 Console.WriteLine($"\t\tMatch at index {match.Index} of length {match.Length}");
+            }
+
+            Console.WriteLine();
+
+            input = "Hello World";
+            var patterns = new List<string>
+            {
+                @"\b\w+\b",
+                @"\bb(\w)+\b",
+            };
+            Console.WriteLine("Captures:");
+            foreach (var examplePattern in patterns)
+            {
+                Console.WriteLine($"\tInput: {input}");
+                Console.WriteLine($"\tPattern: {examplePattern}");
             }
 
             Console.ReadKey();
