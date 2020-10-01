@@ -8,7 +8,7 @@ namespace RegexDemonstration
 {
     class RegexExamples
     {
-        public static void regexLocaleDemonstration()
+        public static void regexUnicodeDemonstration()
         {
             var input = "a";
 
