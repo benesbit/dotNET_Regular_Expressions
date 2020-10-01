@@ -85,6 +85,21 @@ namespace RegexDemonstration
             input = @"{ {} {    }}";
             Console.WriteLine($"\tIs {input} balanced? {Regex.IsMatch(input, pattern)}");
 
+            Console.WriteLine();
+
+            Console.WriteLine("Nested Captures:");
+            input = @"{ 1 { 2 3 } { 4 { 5 } 6 } 7 }";
+            pattern = @"^((?:[^{}]*)|(?<Open>{)|(?<Contents-Open>}))*(?(Open)(?!))$";
+            Console.WriteLine($"\tInput: {input}");
+            Console.WriteLine($"\tPattern: {pattern}");
+            var matches = Regex.Matches(input, pattern);
+            var contents = matches[0].Groups["Contents"];
+            Console.WriteLine($"\t{contents.Name} Group:");
+            foreach (Capture capture in contents.Captures)
+            {
+                Console.WriteLine($"\t\t{capture.Value}: Capture at index {capture.Index} of length {capture.Length}.");
+            }
+
 
             Console.ReadKey();
         }
