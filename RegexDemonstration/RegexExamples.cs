@@ -40,6 +40,14 @@ namespace RegexDemonstration
 
             Console.WriteLine($"\tDoes the emoji match \\U0001F60E? {Regex.IsMatch(input, "\U0001F60E")}");
 
+            Console.WriteLine();
+
+            input = "İ"; // Turkish capital i
+            var pattern = "i";
+
+            Console.WriteLine("Turkish Culture");
+            //Console.WriteLine($"\tMatches without CultureInvariant? {Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase)}");
+
             Console.ReadKey();
         }
 
