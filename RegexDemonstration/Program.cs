@@ -17,6 +17,19 @@ namespace RegexDemonstration
             //regexExpressionOptions();
         }
 
+        public static void regexLookaheadLookbehind()
+        {
+            var patterns = new List<string>
+            {
+                @"[A-Z]",
+                "[A-Z-[Z]]",
+                "a(?=b)",
+                "a(?!b)",
+                "(?<=c)a",
+                "(?<!c)a",
+            };
+        }
+
         public static void regexExpressionOptions()
         {
             var patterns = new List<string>
