@@ -46,7 +46,8 @@ namespace RegexDemonstration
             var pattern = "i";
 
             Console.WriteLine("Turkish Culture");
-            //Console.WriteLine($"\tMatches without CultureInvariant? {Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase)}");
+            Console.WriteLine($"\tMatches without CultureInvariant? {Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase)}");
+            Console.WriteLine($"\tMatches with CultureInvariant? {Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant)}");
 
             Console.ReadKey();
         }
