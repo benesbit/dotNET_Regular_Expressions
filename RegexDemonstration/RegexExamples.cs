@@ -46,7 +46,7 @@ namespace RegexDemonstration
 
             timer.Reset();
             timer.Start();
-            Regex.IsMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+            Regex.IsMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
                 "(a+(aa)+(aaa)+(aa)+a+)+b.");
             timer.Stop();
 
