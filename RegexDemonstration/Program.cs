@@ -13,7 +13,7 @@ namespace RegexDemonstration
             //RegexExamples.regexExpressionOptions();
             //RegexExamples.regexLookaheadLookbehind();
             //RegexExamples.regexRunawyExpression();
-            RegexExamples.regexLocaleDemonstration();
+            RegexExamples.regexUnicodeDemonstration();
         }
     }
 }
