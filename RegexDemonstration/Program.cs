@@ -28,6 +28,21 @@ namespace RegexDemonstration
                 "(?<=c)a",
                 "(?<!c)a",
             };
+
+            var inputs = new List<string>
+            {
+                "",
+                "a",
+                "b",
+                "c",
+                "ab",
+                "ca",
+                "cab",
+                "A",
+                "B",
+                "Z",
+                "AA",
+            };
         }
 
         public static void regexExpressionOptions()
