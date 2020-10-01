@@ -14,6 +14,7 @@ namespace RegexDemonstration
 
             Console.WriteLine(input);
             Console.WriteLine($"\tCode point: {GetCodePoint(input, 0)}");
+            Console.WriteLine($"\tLength of input string: {input.Length}");
 
             Console.ReadKey();
         }
